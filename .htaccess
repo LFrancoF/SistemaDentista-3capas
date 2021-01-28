@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+    #Activar rewrite
+    RewriteEngine on
+
+    RewriteCond %{SCRIPT_FILENAME} !-d  
+    RewriteCond %{SCRIPT_FILENAME} !-f
+
+    RewriteRule ^(.*)/(.*) index.php?presentacion=$1&funct=$2
+</IfModule>
